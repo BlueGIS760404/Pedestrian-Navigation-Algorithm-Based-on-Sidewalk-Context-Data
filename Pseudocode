@@ -1,0 +1,45 @@
+Here is a pseudocode for Dijkstra's algorithm that finds all possible paths with detailed comments:
+
+DijkstraAllPaths(G, start):
+    dist[start] = 0  // Initialize distance from start node to itself as 0
+    Q = priority queue  // Create a priority queue to store nodes based on their distances
+    Q.insert(start, 0)  // Insert the start node into the priority queue with distance 0
+    
+    while Q is not empty:  // Continue until all nodes have been processed
+        u = Q.extractMin()  // Extract the node with minimum distance from the priority queue
+        
+        for each neighbor v of u:  // Iterate over each neighbor of node u
+            alt = dist[u] + weight(u, v)  // Calculate the alternative distance through node u to neighbor v
+            if alt < dist[v]:  // If the alternative distance is less than the current distance to v
+                dist[v] = alt  // Update the distance to v with the alternative distance
+                prev[v] = [u]  // Store the predecessor of v as u in the previous array
+                Q.insert(v, alt)  // Insert node v into the priority queue with its new distance
+                
+            else if alt == dist[v]:  // If there is another shortest path to v with the same distance
+                prev[v].append(u)  // Add u as another predecessor of v in the previous array
+                
+    return dist, prev  // Return the array of distances and the array of predecessors
+
+getPaths(prev, start, end):
+    paths = []  // Initialize an empty list to store all possible paths
+    stack = []  // Initialize a stack to keep track of nodes in the current path
+    stack.push(end)  // Start from the end node
+    
+    while stack is not empty:  // Continue until all paths have been explored
+        node = stack.pop()  // Pop the top node from the stack
+        
+        if node == start:  // If we have reached the start node
+            path = []  // Initialize a new path
+            for n in reversed(stack):  // Traverse the stack in reverse order
+                path.append(n)  // Add each node to the current path
+            path.append(start)  // Add the start node to complete the path
+            paths.append(path)  // Add the path to the list of paths
+            
+        else:
+            for each parent of node in prev:  // Iterate over all predecessors of the current node
+                stack.push(parent)  // Add each parent to the stack to explore different paths
+                
+    return paths  // Return the list of all possible paths
+
+
+This pseudocode first runs Dijkstra's algorithm to find the shortest paths from the start node to all other nodes. Then, it uses a backtracking approach to find all possible paths from the start node to the end node. The detailed comments explain each step of the algorithm.
