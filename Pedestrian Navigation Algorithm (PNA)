@@ -1,4 +1,4 @@
-Here is a pseudocode for Dijkstra's algorithm that finds all possible paths with detailed comments:
+Here is a pseudocode for Dijkstra's algorithm that finds all possible paths with detailed attributes:
 
 DijkstraAllPaths(G, start):
     dist[start] = 0  // Initialize distance from start node to itself as 0
