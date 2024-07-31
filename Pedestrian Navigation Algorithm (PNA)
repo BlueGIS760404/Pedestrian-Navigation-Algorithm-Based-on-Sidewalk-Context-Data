@@ -61,4 +61,4 @@ Let s = A, t = D, and k = 3.
 Therefore, KSP(A, D, 3) = {AB, BD, AC, CD, AC, BD}.
 
 2.	Phase II: Attributes Retrieval and Presentation
-The stored navigation information (e.g., presence of sidewalk, greenery, missing curb ramps, etc.) corresponding to each segment in the “shortest” and “alternative” paths are retrieved from the tables as key-value pairs. Finally, the geometry of the “shortest” and “alternative” paths and their comprehensive navigation attributes are symbolized and presented to the users.
+The stored navigation information (e.g., presence of sidewalk, greenery, missing curb ramps, etc.) corresponding to each segment in the “shortest” and “alternative” paths are retrieved from the tables as key-value pairs. Finally, the geometry of the “shortest” and “alternative” paths and their comprehensive sidewalk attributes are presented to the users.
