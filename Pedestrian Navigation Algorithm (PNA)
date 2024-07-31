@@ -1,4 +1,4 @@
-__Pedestrian Navigation Algorithm (PNA): A Mathematical Expression__
+__ Pedestrian Navigation Algorithm (PNA): A Mathematical Expression __
 1.	Phase I: Calculating the k-shortest paths between A and B
 First, the algorithm finds the k-shortest paths between A and B. The general idea is to find the shortest path, then progressively find paths with increasing weight that are not dominated by already found paths.
 1.1.	Graph Representation
