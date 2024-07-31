@@ -17,7 +17,7 @@ Given:
  <li>Destination vertex t ∈ V</li>
  <li>Integer k > 0</li>
 </ul>
-Find:<br>
+Find:
 KSP(s, t, k) = {p1, p2, ..., pk}: A set containing the k-shortest paths from s to t in G, ordered by increasing path weight. <br><br>
 
 d(p): The weight of a path p = (s, v1, v2, ..., t) is defined as the sum of the edge weights: <br>
@@ -81,6 +81,7 @@ Let s = A, t = D, and k = 3. <br>
 <li>Filtering: None</li>
 <li>Next Shortest: p5 is chosen since it's not dominated and its weight is greater than p2's.</li>
  </ol>
+ 
 Therefore, KSP(A, D, 3) = {AB, BD, AC, CD, AC, BD}.
 <br>
 
