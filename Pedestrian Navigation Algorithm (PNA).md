@@ -1,4 +1,4 @@
-**Pedestrian Navigation Algorithm (PNA)**
+# Pedestrian Navigation Algorithm (PNA)
 
 __Phase I: The K-Shortest Paths Calculation__ <br>
 The algorithm finds the k-shortest paths between A and B. The general idea is to find the shortest path, then progressively find paths with increasing weight that are not dominated by already found paths.
