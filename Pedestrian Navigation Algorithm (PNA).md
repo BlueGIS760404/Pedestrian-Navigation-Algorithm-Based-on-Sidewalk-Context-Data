@@ -119,9 +119,10 @@ The stored navigation information (e.g., presence of sidewalk, greenery, missing
    <li>Extract all the edge's attributes and add them to the corresponding dictionary</li>
   </ul>
   </ul>
- <li>For each key of edge_attribs:</li>
+ <li>For each key of edge's attributes:</li>
  <ul>
   <li>Extract unique values and sum of the related length</li>
-  <li>Message % of path that is of type unique value</li>
+  <li>Return % of path that is of type unique value</li>
  </ul>
+ <li>Present the geometry and edge's attributes related to the "shortest" and "alternative" paths</li>
 </ol>
