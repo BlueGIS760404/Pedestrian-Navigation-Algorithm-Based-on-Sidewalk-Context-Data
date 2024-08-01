@@ -3,27 +3,45 @@
 __Phase I: The K-Shortest Paths Calculation__ <br>
 The algorithm finds the k-shortest paths between A and B. The general idea is to find the shortest path, then progressively find paths with increasing weight that are not dominated by already found paths.
 
-__1. Graph Representation__ <br>
+<ol>
+ <li>
+  
+__Graph Representation__ </li>
 <ul>
  <li>G = (V, E): A directed graph with a set of vertices V and a set of edges E.</li>
- <li>w(u, v): The weight (or cost) associated with the edge (u, v) ∈ E.</li>
+ <li>w(u, v): Weight of edge (u, v) ∈ E, representing distance, time, or any other relevant metric.</li>
+ <li>s: Source vertex.</li>
+ <li>t: Destination vertex.</li>
+ <li>k: Number of shortest paths to be found (k > 0).</li>
+ <li>P(s, t): Set of all possible paths from s to t.</li>
+ <li>d(p): Total weight of path p, sum of weights of all edges in the path.</li>
+ <li>KSP(s, t, k): Set of k shortest paths from s to t, ordered by increasing path weight.</li>
+ <li>SP(s, t): Shortest path from s to t.</li>
 </ul>
 
-__2.	Problem Definition__ <br>
+<li>
+ 
+__Problem Definition__ </li>
 Given:
 <ul>
  <li>Graph G = (V, E) with edge weights w(u, v)</li>
  <li>Source vertex s ∈ V</li>
  <li>Destination vertex t ∈ V</li>
  <li>Integer k > 0</li>
-</ul>
-Find:
-KSP(s, t, k) = {p1, p2, ..., pk}: A set containing the k-shortest paths from s to t in G, ordered by increasing path weight. <br><br>
+</ul><br>
 
+Find:<br>
+KSP(s, t, k) = {p1, p2, ..., pk}: A set containing the k-shortest paths from s to t in G, ordered by increasing path weight.
+
+<li>
+ 
+__Path Weight__ </li>
 d(p): The weight of a path p = (s, v1, v2, ..., t) is defined as the sum of the edge weights: <br>
 d(p) = ∑ w(vi, vi+1), for 0 ≤ i ≤ |p|-2, where v0 = s and v|p|-1 = t
 
-__3.	General Algorithm__ <br>
+<li>
+ 
+__General Algorithm__ </li>
 <ul>
  <li>Initialization:</li>
  <ul>
@@ -40,7 +58,9 @@ __3.	General Algorithm__ <br>
  </ul>
     </ul>
 
-__4.	Mathematical Expressions__ <br>
+<li>
+ 
+__Mathematical Expressions__ </li>
 <ul>
  <li>Dominance: A path p' is dominated by path p if it has the same starting and ending nodes, but p' has a higher weight and also contains all the edges of p.</li>
  <li>Candidate Path Generation:</li>
@@ -53,7 +73,9 @@ __4.	Mathematical Expressions__ <br>
 <li> Filtering: Remove candidate paths where a path p exists in KSP(s, t, k) such that d(p) ≤ d(p') and p contains all the edges of p'. </li>
 </ul>
 
-__5.	Example__ <br>
+<li>
+ 
+__Example__ </li>
 Consider a graph with nodes A, B, C, D, and edges:
 <ul>
 <li>AB: weight 1</li>
@@ -61,7 +83,7 @@ Consider a graph with nodes A, B, C, D, and edges:
 <li>BC: weight 1</li>
 <li>BD: weight 2</li>
 <li>CD: weight 1</li>
-</ul>
+</ul><br>
 
 Let s = A, t = D, and k = 3. <br>
 <ol>
@@ -80,10 +102,11 @@ Let s = A, t = D, and k = 3. <br>
   </ul>
 <li>Filtering: None</li>
 <li>Next Shortest: p5 is chosen since it's not dominated and its weight is greater than p2's.</li>
- </ol>
+ </ol><br>
  
 Therefore, KSP(A, D, 3) = {AB, BD, AC, CD, AC, BD}.
 <br>
+</ol>
 
 __Phase II: Attributes Retrieval and Presentation__ <br>
 The stored navigation information (e.g., presence of sidewalk, greenery, missing curb ramps, etc.) corresponding to each segment in the “shortest” and “alternative” paths are retrieved from the tables as key-value pairs. Finally, the geometry of the “shortest” and “alternative” paths and their comprehensive sidewalk attributes are presented to the users.
