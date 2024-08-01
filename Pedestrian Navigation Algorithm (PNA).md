@@ -28,7 +28,8 @@ Given:
  <li>Source vertex s ∈ V</li>
  <li>Destination vertex t ∈ V</li>
  <li>Integer k > 0</li>
-</ul>
+</ul><br>
+
 Find:<br>
 KSP(s, t, k) = {p1, p2, ..., pk}: A set containing the k-shortest paths from s to t in G, ordered by increasing path weight.
 
@@ -82,7 +83,7 @@ Consider a graph with nodes A, B, C, D, and edges:
 <li>BC: weight 1</li>
 <li>BD: weight 2</li>
 <li>CD: weight 1</li>
-</ul>
+</ul><br>
 
 Let s = A, t = D, and k = 3. <br>
 <ol>
@@ -101,7 +102,7 @@ Let s = A, t = D, and k = 3. <br>
   </ul>
 <li>Filtering: None</li>
 <li>Next Shortest: p5 is chosen since it's not dominated and its weight is greater than p2's.</li>
- </ol>
+ </ol><br>
  
 Therefore, KSP(A, D, 3) = {AB, BD, AC, CD, AC, BD}.
 <br>
