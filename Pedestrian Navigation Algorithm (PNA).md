@@ -121,7 +121,7 @@ The stored navigation information (e.g., presence of sidewalk, greenery, missing
   </ul>
  <li>For each key of edge_attribs:</li>
  <ul>
-  <li>Extract unique values and the sum of the related length</li>
+  <li>Extract unique values and sum of the related length</li>
   <li>Message % of path that is of type unique value</li>
  </ul>
 </ol>
