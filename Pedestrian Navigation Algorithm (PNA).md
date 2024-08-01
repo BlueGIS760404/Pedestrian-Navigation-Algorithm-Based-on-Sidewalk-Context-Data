@@ -112,7 +112,7 @@ __Phase II: Attributes Retrieval and Presentation__ <br>
 The stored navigation information (e.g., presence of sidewalk, greenery, missing curb ramps, etc.) corresponding to each segment in the “shortest” and “alternative” paths are retrieved from the tables as key-value pairs. Finally, the geometry of the “shortest” and “alternative” paths and their comprehensive sidewalk attributes are presented to the users.
 <ol>
 <li>Initialize empty dictionaries to store the edge's attributes of each path as key-value pairs</li>
-<li>Until all "shortest" and "alternative" paths have been explored:</li>
+<li>Until all the calculated paths have been explored:</li>
  <ul>
  <li>For each edge in path:</li>
   <ul>
@@ -125,5 +125,3 @@ The stored navigation information (e.g., presence of sidewalk, greenery, missing
   <li>Message % of path that is of type unique value</li>
  </ul>
 </ol>
-
-
