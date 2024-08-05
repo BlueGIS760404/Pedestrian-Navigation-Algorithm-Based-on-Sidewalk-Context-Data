@@ -1,7 +1,7 @@
 <h2>Pedestrian Navigation Algorithm (PNA) Based on Sidewalk Context Data</h2>
 
-__Phase I: The K-Shortest Paths Calculation__ <br>
-The algorithm finds the k-shortest paths between A and B. The general idea is to find the shortest path, then progressively find paths with increasing weight that are not dominated by already found paths.
+__Phase I: The K Shortest Paths Calculation__ <br>
+Yen's algorithm is used to find the k shortest paths between a source and a destination. It uses Dijkstra's shortest path algorithm to calculate the shortest paths between two nodes in a graph network. Dijkstra's algorithm is a graph-based greedy search technique that finds the shortest path between a start node and all other nodes in a graph. The Yen's algorithm ensures that a previously discovered shortest path is not traversed again. The algorithm has a worst-case complexity of O(kNA+NlogN), where \(k\) is the number of shortest paths, \(N\) is the number of nodes in the road network, and \(A\) is the number of links in the road network.
 
 <ol>
  <li>
